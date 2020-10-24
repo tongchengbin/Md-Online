@@ -3,7 +3,7 @@ import {IMAGE_HOSTING_NAMES, IMAGE_HOSTING_TYPE} from "@/utils/constant";
 import {getOSSName} from "@/utils/helper";
 import {getCookie} from "@/utils/cookie";
 
-
+import { Message } from 'element-ui';
 // 阿里云对象存储上传，处理部分
 export const aliOSSUpload = ({
                                  file = {},
@@ -13,6 +13,10 @@ export const aliOSSUpload = ({
                                  },
                              }) => {
     const config_string = getCookie('bedConfig')
+    if(config_string===undefined){
+        Message.warning({message:"请配置图床"})
+        return
+    }
     let bedConfig = JSON.parse(config_string)
     const config = bedConfig.config
     const blob = toBlob(file.miniurl.split(',')[1],file.type);
