@@ -10,26 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce901d9e-f1e5-4e56-8bdc-79a3fbb22c67" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/app.70cc374b.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/chunk-vendors.6032169c.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/fonts/element-icons.535877f5.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/fonts/element-icons.732389de.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/fonts/fontello.068ca2b3.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/fonts/fontello.8d4a4e6f.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/fonts/fontello.a782baa8.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/fonts/fontello.e73a0647.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/fontello.9354499c.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/logo.82b9c7a5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/app.56859f41.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/app.56859f41.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/chunk-vendors.a5beebb6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/chunk-vendors.a5beebb6.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/imageClound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/imageClound.js" afterDir="false" />
-    </list>
+    <list default="true" id="ce901d9e-f1e5-4e56-8bdc-79a3fbb22c67" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,7 +67,7 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -134,6 +115,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1603424026887" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1603769142573">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1603769142573" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1603769083133">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603769083133" />
     <state width="1899" height="356" key="GridCell.Tab.0.bottom" timestamp="1603466471733">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -158,6 +147,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603243769185" />
+    <state x="210" y="17" width="902" height="532" key="VcsDiffUtil.ChangesDialog" timestamp="1603769126671">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="210" y="17" width="902" height="532" key="VcsDiffUtil.ChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1603769126671" />
     <state x="662" y="252" width="596" height="536" key="find.popup" timestamp="1603459101110">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

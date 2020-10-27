@@ -1,25 +1,14 @@
 <template>
-  <el-dialog class="picture_bed" width="520px" size="mini" title="图床" :visible.sync="visible">
-
+  <el-dialog @close="closeDialog" :close-on-click-modal="false" class="picture_bed" width="450px" size="mini" title="登录" :visible.sync="show">
     <div>
-      <el-tabs type="border-card">
-        <el-tab-pane label="阿里云">
-          <el-form class="pic" style="padding: 0;" label-position="right" size="mini" inline label-width="130px">
-              <el-form-item label="Bucket">
-                <el-input v-model="pictureBed.Bucked" ></el-input>
-              </el-form-item>
-            <el-form-item label="Region">
-              <el-input v-model="pictureBed.Region" ></el-input>
-            </el-form-item>
-            <el-form-item label="AccessKey Id">
-              <el-input v-model="pictureBed.AccessKeyId" ></el-input>
-            </el-form-item>
-            <el-form-item label="accessKey Secret">
-              <el-input v-model="pictureBed.accessKeySecret" ></el-input>
-            </el-form-item>
-          </el-form>
-        </el-tab-pane>
-      </el-tabs>
+      <el-form size="small" inline label-position="right" label-width="60px">
+        <el-form-item label="用户名">
+          <el-input v-model="username"></el-input>
+        </el-form-item>
+        <el-form-item label="密码">
+          <el-input v-model="password"></el-input>
+        </el-form-item>
+      </el-form>
     </div>
     <div slot="footer" class="dialog-footer">
       <el-button size="small" @click="dialogFormVisible(false)">取 消</el-button>
@@ -31,18 +20,17 @@
 <script>
 import {getCookie, removeCookie, setCookie} from "@/utils/cookie";
 import {IMAGE_HOSTING_NAMES} from "@/utils/constant";
-
+import axios from 'axios'
+import Message from "element-ui/packages/message/src/main";
 export default {
-  name: 'HelloWorld',
+  name: 'Login',
   props: {
-    msg: String,
-    visible:{
-      type:Boolean,
-      default:true
-    }
   },
   data(){
     return {
+      show:true,
+      username:'',
+      password:'',
       pictureBed:{
         Bucked:'',
         Region:'',
@@ -62,31 +50,33 @@ export default {
         console.log(err)
         removeCookie('bedConfig')
       }
-
-
-
     }
   },
   methods:{
+    closeDialog(done){
+      console.log(done)
+      this.$emit('closeLogin')
+    },
     dialogFormVisible(e){
-
-      if(e){
-        if (!(this.pictureBed.AccessKeyId &&
-            this.pictureBed.Bucked && this.pictureBed.Region
-            && this.pictureBed.accessKeySecret)){
-          return
-        }
+      if(!e){
+        this.$emit('closeLogin')
+        return
+      }
+      let username = this.username
+      let password = this.password
+      axios.post('http://api.tongchengbin.com/api/md_online/',{
+        username,password
+      }).then(res=>{
         let config = {
           "type":IMAGE_HOSTING_NAMES.aliyun,
-          "config":this.pictureBed
+          "config":res.data.config
         }
+        setCookie('username',res.data.username)
         setCookie("bedConfig",JSON.stringify(config))
-        this.$emit('change',1)
-      //  提交
-      }else{
-        setCookie("bed",)
-        this.$emit('change',0)
-      }
+        this.$emit('closeLogin')
+      }).catch(err=>{
+        Message.error(err.response.data.msg)
+      })
     },
   }
 

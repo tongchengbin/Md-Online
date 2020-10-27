@@ -24,9 +24,13 @@
         </el-dropdown>
       </div>
       <div class="right_menu">
+<<<<<<< HEAD
 <!--        <span class="btn_user menu_link">-->
 <!--          登录-->
 <!--        </span>-->
+=======
+        <el-dropdown-item @click.native="openLogin">{{ loginTitle }}</el-dropdown-item>
+>>>>>>> b86a53c149edc4b1cacbea1387916112fddb8487
       </div>
     </div>
     <div class="content">
@@ -41,6 +45,10 @@
 
     </div>
     <picture-bed v-if="editBed" @change="pictureBedEvent"></picture-bed>
+<<<<<<< HEAD
+=======
+    <login v-if="showLogin" @closeLogin="closeLogin"></login>
+>>>>>>> b86a53c149edc4b1cacbea1387916112fddb8487
   </div>
 </template>
 
@@ -51,10 +59,20 @@ import {dateFormat, download} from "@/utils/helper";
 import {EXPORT_FILENAME_SUFFIX} from "@/utils/constant";
 import {uploadAdaptor} from "../utils/imageClound";
 import PictureBed from "@/components/PictureBed";
+<<<<<<< HEAD
+=======
+import Login from "@/components/Login";
+import {getCookie} from "@/utils/cookie";
+>>>>>>> b86a53c149edc4b1cacbea1387916112fddb8487
 export default {
 name: "Index",
   data(){
   return {
+<<<<<<< HEAD
+=======
+    loginTitle:"登录",
+    showLogin:false,
+>>>>>>> b86a53c149edc4b1cacbea1387916112fddb8487
     editBed:false,
     openMenu:-1,
     currentThemeSrc:"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/styles/github.min.css",
@@ -84,6 +102,12 @@ name: "Index",
     }
   }
   },
+<<<<<<< HEAD
+=======
+  created() {
+    this.loginTitle = getCookie('username') || '登录'
+  },
+>>>>>>> b86a53c149edc4b1cacbea1387916112fddb8487
   methods:{
     handleEditorImgAdd(pos,$file){
       uploadAdaptor({file:$file,onSuccess:(res)=>{
@@ -121,11 +145,24 @@ name: "Index",
     },
     pictureBedEvent(){
       this.editBed = false
+<<<<<<< HEAD
+=======
+    },
+    openLogin(){
+      this.showLogin = true
+    },
+    closeLogin(){
+      this.showLogin = false
+>>>>>>> b86a53c149edc4b1cacbea1387916112fddb8487
     }
 
   },
   components:{
+<<<<<<< HEAD
   PictureBed
+=======
+  PictureBed,Login
+>>>>>>> b86a53c149edc4b1cacbea1387916112fddb8487
   },
   mounted(){
     hljs.initHighlighting()
