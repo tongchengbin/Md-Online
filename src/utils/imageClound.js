@@ -2,14 +2,10 @@ import OSS from "ali-oss";
 import {IMAGE_HOSTING_NAMES, IMAGE_HOSTING_TYPE} from "@/utils/constant";
 import {getOSSName} from "@/utils/helper";
 import {getCookie} from "@/utils/cookie";
-<<<<<<< HEAD
 
 import { Message } from 'element-ui';
-=======
-import {Message} from "element-ui";
 
 
->>>>>>> b86a53c149edc4b1cacbea1387916112fddb8487
 // 阿里云对象存储上传，处理部分
 export const aliOSSUpload = ({
                                  file = {},
@@ -19,7 +15,6 @@ export const aliOSSUpload = ({
                                  },
                              }) => {
     const config_string = getCookie('bedConfig')
-<<<<<<< HEAD
     if(config_string===undefined){
         Message.warning({message:"请配置图床"})
         return
@@ -28,7 +23,6 @@ export const aliOSSUpload = ({
     const config = bedConfig.config
     const blob = toBlob(file.miniurl.split(',')[1],file.type);
     aliOSSPutObject({config, file, blob, onSuccess, onError});
-=======
     if(config_string){
         let bedConfig = JSON.parse(config_string)
         const config = bedConfig.config
@@ -37,9 +31,6 @@ export const aliOSSUpload = ({
     }else{
         Message.warning({message:"未配置图床"})
     }
-
-
->>>>>>> b86a53c149edc4b1cacbea1387916112fddb8487
 };
 
 // 阿里对象存储，上传部分
